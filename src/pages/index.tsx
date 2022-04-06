@@ -1,28 +1,14 @@
-import { Center, Heading, useColorMode } from '@chakra-ui/react';
+import { Center, Heading, Container } from '@chakra-ui/react';
+import { NextPage } from 'next';
 
 import Hero from 'components/Hero';
-import Container from 'components/Container';
-import ColorModeSwitch from 'components/ColorModeSwitch';
 
-const Index = () => {
-  const { colorMode } = useColorMode();
-
-  const color = { light: 'black', dark: 'whiteAlpha.400' };
-
+const Index: NextPage = () => {
   return (
-    <Container height="100vh">
-      <ColorModeSwitch />
+    <Container maxW="container.lg">
       <Hero title="Milkshake Website" />
 
-      <Heading
-        as="h3"
-        size="md"
-        fontWeight="bold"
-        position="fixed"
-        bottom="8"
-        color={color[colorMode]}
-        textTransform="uppercase"
-      >
+      <Heading as="h3" size="md" textAlign="center" fontWeight="bold">
         <Center>Under Consturction</Center>
       </Heading>
     </Container>
