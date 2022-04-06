@@ -9,7 +9,7 @@ const Index: NextPage = () => {
       <Hero title="Milkshake Website" />
 
       <Heading as="h3" size="md" textAlign="center" fontWeight="bold">
-        <Center>Under Consturction</Center>
+        <Center>Under Construction</Center>
       </Heading>
     </Container>
   );
