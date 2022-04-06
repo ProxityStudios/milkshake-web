@@ -6,12 +6,7 @@ const Navbar = () => {
 
   return (
     <Box bg={navbarBg} h="12" px="6" overflow="hidden">
-      <Container
-        as={Flex}
-        maxW="container.lg"
-        h="full"
-        alignItems="center"
-      >
+      <Container as={Flex} maxW="container.lg" h="full" alignItems="center">
         Dark Mode: <ColorModeSwitch />
       </Container>
     </Box>
