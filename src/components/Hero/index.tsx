@@ -5,16 +5,12 @@ export type HeroProps = {
   title?: string;
 };
 
-const Hero: FC<HeroProps> = ({ title = 'Milkshake' }) => (
-  <Flex
-    justifyContent="center"
-    alignItems="center"
-    bgGradient="linear(to-l, #7928CA, #FF0080)"
-    bgClip="text"
-  >
-    <Img src="/img/chakra-logo.png" alt="Chakra-ui Logo" mr={4} />
-    <Heading size="2xl">{title}</Heading>
-  </Flex>
-);
-
+const Hero: FC<HeroProps> = ({ title = 'Milkshake' }) => {
+  return (
+    <Flex justifyContent="center" alignItems="center">
+      <Img src="/img/chakra-logo.png" alt="Chakra-ui Logo" mr={4} />
+      <Heading size="2xl">{title}</Heading>
+    </Flex>
+  );
+};
 export default Hero;
