@@ -1,9 +1,14 @@
-import { Flex, Heading } from '@chakra-ui/react'
+import { Flex, Heading } from '@chakra-ui/react';
+import { FC} from 'react';
 
-const {{pascalCase name}} = () => (
-  <Flex>
-    <Heading>{{pascalCase name}}</Heading>
-  </Flex>
-)
+type {{pascalCase name}}Props = {};
 
-export default {{pascalCase name}}
+const {{pascalCase name}}: FC<{{pascalCase name}}Props> = () => {
+    return (
+      <Flex>
+        <Heading>{{pascalCase name}}</Heading>
+      </Flex>
+    )
+};
+
+export default {{pascalCase name}};
