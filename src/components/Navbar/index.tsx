@@ -1,15 +1,20 @@
-import { Box, Container, Flex, useColorModeValue } from '@chakra-ui/react';
+import { Box, useColorModeValue } from '@chakra-ui/react';
+import BaseContainer from 'components/BaseContainer';
 import ColorModeSwitch from 'components/ColorModeSwitch';
 
 const Navbar = () => {
-  const navbarBg = useColorModeValue('secondary.400', 'secondary.600');
+  const colors = {
+    bg: useColorModeValue('secondary.50', 'secondary.500'),
+    color: useColorModeValue('white', 'primary.500')
+  };
 
   return (
-    <Box bg={navbarBg} h="12" px="6" overflow="hidden">
-      <Container as={Flex} maxW="container.lg" h="full" alignItems="center">
-        Dark Mode: <ColorModeSwitch />
-      </Container>
-    </Box>
+    <BaseContainer color={colors.color} boxProps={{ py: '4', bg: colors.bg }}>
+      <Box>
+        Dark Mode
+        <ColorModeSwitch ml="1" />
+      </Box>
+    </BaseContainer>
   );
 };
 
