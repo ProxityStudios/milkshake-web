@@ -8,6 +8,7 @@ import colors from './foundations/colors';
 import shadows from './foundations/shadows';
 
 import Button from './components/button';
+import Switch from './components/switch';
 
 const customTheme = {
   styles,
@@ -16,7 +17,8 @@ const customTheme = {
   colors,
   shadows,
   components: {
-    Button
+    Button,
+    Switch
   }
 };
 

@@ -1,17 +1,15 @@
-import { Center, Heading, Container } from '@chakra-ui/react';
 import { NextPage } from 'next';
 
 import Hero from 'components/Hero';
+import BaseContainer from 'components/BaseContainer';
 
 const Index: NextPage = () => {
   return (
-    <Container maxW="container.lg">
-      <Hero title="Milkshake Website" />
-
-      <Heading as="h3" size="md" textAlign="center" fontWeight="bold">
-        <Center>Under Construction</Center>
-      </Heading>
-    </Container>
+    <>
+      <BaseContainer>
+        <Hero title="Milkshake Bot" />
+      </BaseContainer>
+    </>
   );
 };
 

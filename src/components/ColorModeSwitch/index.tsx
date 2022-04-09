@@ -1,6 +1,9 @@
-import { useColorMode, Switch } from '@chakra-ui/react';
+import { useColorMode, Switch, SwitchProps } from '@chakra-ui/react';
+import { FC } from 'react';
 
-const ColorModeSwitch = () => {
+type ColorModeSwitchProps = SwitchProps & {};
+
+const ColorModeSwitch: FC<ColorModeSwitchProps> = (props) => {
   const { colorMode, toggleColorMode } = useColorMode();
   const isDark = colorMode === 'dark';
 
@@ -9,6 +12,7 @@ const ColorModeSwitch = () => {
       aria-label="Toggle color mode"
       isChecked={isDark}
       onChange={toggleColorMode}
+      {...props}
     />
   );
 };

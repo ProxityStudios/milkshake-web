@@ -1,14 +1,20 @@
-import { Flex, Heading, Img } from '@chakra-ui/react';
+import { Flex, FlexProps, Heading, Img } from '@chakra-ui/react';
 import { FC } from 'react';
 
-export type HeroProps = {
+export type HeroProps = FlexProps & {
   title?: string;
 };
 
-const Hero: FC<HeroProps> = ({ title = 'Milkshake' }) => {
+const Hero: FC<HeroProps> = ({ title = 'Milkshake', ...props }) => {
   return (
-    <Flex justifyContent="center" alignItems="center">
-      <Img src="/img/chakra-logo.png" alt="Chakra-ui Logo" mr={4} />
+    <Flex {...props} justifyContent="center" alignItems="center" p="10">
+      <Img
+        borderRadius="full"
+        h="12"
+        src="/img/milkshake-logo.png"
+        alt="Milkshake Logo"
+        mr={4}
+      />
       <Heading size="2xl">{title}</Heading>
     </Flex>
   );
