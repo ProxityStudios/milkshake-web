@@ -4,7 +4,8 @@ import { ChakraProvider } from '@chakra-ui/react';
 
 import theme from 'theme';
 import CompanyBar from 'components/CompanyBar';
-import Navbar from 'components/Navbar';
+import Topbar from 'components/Topbar';
+import { SlideFade } from '@chakra-ui/react';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -16,9 +17,12 @@ function MyApp({ Component, pageProps }: AppProps) {
       </Head>
 
       <CompanyBar />
-      <Navbar />
+      <Topbar />
 
-      <Component {...pageProps} />
+      <SlideFade in>
+        <Component {...pageProps} />
+      </SlideFade>
+
     </ChakraProvider>
   );
 }

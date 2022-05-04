@@ -2,7 +2,7 @@ import { Box, useColorModeValue } from '@chakra-ui/react';
 import BaseContainer from 'components/BaseContainer';
 import ColorModeSwitch from 'components/ColorModeSwitch';
 
-const Navbar = () => {
+const Topbar = () => {
   const colors = {
     bg: useColorModeValue('secondary.50', 'secondary.500'),
     color: useColorModeValue('white', 'primary.500')
@@ -18,4 +18,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Topbar;

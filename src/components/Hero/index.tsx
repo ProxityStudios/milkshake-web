@@ -7,7 +7,7 @@ export type HeroProps = FlexProps & {
 
 const Hero: FC<HeroProps> = ({ title = 'Milkshake', ...props }) => {
   return (
-    <Flex {...props} justifyContent="center" alignItems="center" p="10">
+    <Flex justifyContent="center" alignItems="center" p="10" {...props}>
       <Img
         borderRadius="full"
         h="12"

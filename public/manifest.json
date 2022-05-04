@@ -3,7 +3,7 @@
   "short_name": "Milkshake Web",
   "icons": [
     {
-      "src": "/img/chakra-logo.png",
+      "src": "/img/milkshake-logo.png",
       "type": "image/png",
       "sizes": "48x48"
     }
