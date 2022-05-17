@@ -12,7 +12,7 @@ const NavigationBar: React.FC<NavigationBarProps> = (props) => {
   const backdropBrightness = useColorModeValue(1.1, 1);
 
   return (
-    <Container zIndex={1} as={Flex} alignItems="center" justifyContent="space-between" borderBottomRadius="2xl" backdropFilter="auto" backdropBrightness={backdropBrightness} backdropBlur="lg" maxW="container.xl" py="6" {...props}>
+    <Container zIndex={1} overflow="hidden" as={Flex} alignItems="center" justifyContent="space-between" borderBottomRadius="2xl" backdropFilter="auto" backdropBrightness={backdropBrightness} backdropBlur="lg" maxW="container.xl" py="5" {...props}>
       <HStack spacing="6" divider={<StackDivider />} alignItems="center">
 
         {/* left logo */}

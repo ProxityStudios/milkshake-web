@@ -14,6 +14,7 @@ const CompanyBarToolsComponent: React.FC<CompanyBarToolsComponentProps> = (props
      return (
           <HStack justifyContent="flex-start" spacing="3" {...props}>
                <IconButtonComponent onClick={() => {
+                    // @ts-ignore
                     companyUpdateContext.toggleBarSize();
                     toast({ status: "success", title: "Size of Company Bar has Changed!", description: "COMPANY_BAR_TOOLS_BAR_SIZE" });
                }} tooltipLabel={"Company Bar Size"} aria-label={"Company Bar Size"} icon={<ViewIcon fontSize="xl" />} />

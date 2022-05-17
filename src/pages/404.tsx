@@ -6,7 +6,7 @@ import { DynamicPageComponent } from '../components';
 
 const NotFoundPage: NextPage = () => {
   return (
-    <DynamicPageComponent>
+    <DynamicPageComponent hero={null}>
       <Head>
         <title>Hmm... You lose your way? | Milkshake</title>
       </Head>

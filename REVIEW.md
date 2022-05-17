@@ -5,7 +5,11 @@ known issues:
      bg color of alerts
      StackDivider color changes on forcely selected color mode
      *dev* type errors for context actions
-     zIndex of MenuList
+     default zIndex of MenuList
      bg color of MenuList
-     fontSize of icons
+     default fontSize of icons
      locked color mode bug on MenuList
+     image optimiziations
+
+todo:
+     add eslint

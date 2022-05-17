@@ -7,7 +7,7 @@ const colors = {
     }
   },
   black: {
-    muted: "hsla(30, 6%, 65%, 1)",
+    muted: "hsla(30, 6%, 60%, 1)",
     base: "hsla(30, 6%, 9%, 1)"
   },
   rose: {

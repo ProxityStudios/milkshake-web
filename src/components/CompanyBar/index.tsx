@@ -61,6 +61,7 @@ const CompanyBar: React.FC<CompanyBarProps> = (props) => {
                       </Portal>
                     </Menu>
                   </> :
+                    // @ts-ignore
                     <Button variant="outline" onClick={() => companyUpdateContext.signInUser({
                       isLogged: true,
                       displayName: "Crawl",

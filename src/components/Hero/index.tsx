@@ -1,22 +1,31 @@
-import { Flex, FlexProps, Heading, Img } from '@chakra-ui/react';
-import { FC } from 'react';
+import { Box, Button, Center, Container, Image, FlexProps, Grid, GridItem, Heading, Text, Flex } from '@chakra-ui/react';
+import { FC, ReactNode } from 'react';
 
-export type HeroProps = FlexProps & {
-  title?: string;
+export type HeroComponentProps = FlexProps & {
+  heading: string;
+  text?: string;
+  additions?: ReactNode;
+  leftAdditions?: ReactNode;
+  image?: string;
 };
 
-const Hero: FC<HeroProps> = ({ title = 'Milkshake', ...props }) => {
+const HeroComponent: FC<HeroComponentProps> = ({ heading, text, additions, leftAdditions, image, ...props }) => {
   return (
-    <Flex justifyContent="center" alignItems="center" p="10" {...props}>
-      <Img
-        borderRadius="full"
-        h="12"
-        src="/img/milkshake-logo.png"
-        alt="Milkshake Logo"
-        mr={4}
-      />
-      <Heading size="2xl">{title}</Heading>
-    </Flex>
+    <Center as="section" id="hero-section" minH="md" py="24">
+      <Container as={Grid} gridGap="10" gridTemplateColumns={`repeat(2, 1fr)`} maxW="container.lg" {...props}>
+        <GridItem as={Center} flexDirection="column" alignItems="flex-start">
+          <Box>
+            <Heading size="3xl">{heading}</Heading>
+            {text && <Text fontSize="2xl" color="black.muted" mt="4">{text}</Text>}
+          </Box>
+          {leftAdditions && <Box mt="20">
+            {leftAdditions}
+          </Box>}
+        </GridItem>
+        <GridItem as={Image} src={image} borderRadius="lg" alt={"Hero Image"} />
+        {additions && additions}
+      </Container>
+    </Center>
   );
 };
-export default Hero;
+export default HeroComponent;
