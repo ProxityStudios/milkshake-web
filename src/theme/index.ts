@@ -6,9 +6,11 @@ import config from './foundations/config';
 import fonts from './foundations/fonts';
 import colors from './foundations/colors';
 import shadows from './foundations/shadows';
+import breakpoints from './foundations/breakpoints';
 
-import Button from './components/button';
-import Switch from './components/switch';
+import Button from './components/Button';
+import Switch from './components/Switch';
+import Tooltip from './components/Tooltip';
 
 const customTheme = {
   styles,
@@ -16,9 +18,11 @@ const customTheme = {
   config,
   colors,
   shadows,
+  breakpoints,
   components: {
     Button,
-    Switch
+    Switch,
+    Tooltip
   }
 };
 

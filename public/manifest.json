@@ -1,16 +1,16 @@
 {
-  "name": "Milkshake Website",
-  "short_name": "Milkshake Web",
+  "name": "Milkshake",
+  "short_name": "Milkshake",
   "icons": [
     {
-      "src": "/img/milkshake-logo.png",
+      "src": "/milkshake-logo.png",
       "type": "image/png",
       "sizes": "48x48"
     }
   ],
-  "background_color": "#000",
-  "description": "Official Milkshake Bot website.",
+  "description": "Official Milkshake's Website.",
   "display": "fullscreen",
   "start_url": "/",
+  "background_color": "#000",
   "theme_color": "#000"
 }

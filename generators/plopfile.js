@@ -18,7 +18,7 @@ module.exports = (plop) => {
   });
 
   plop.setGenerator('page', {
-    description: 'Generate a page',
+    description: 'Create a page',
     prompts: [
       {
         type: 'input',

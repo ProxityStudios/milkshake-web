@@ -1,15 +1,11 @@
-import { Heading } from '@chakra-ui/react';
-import { FC } from 'react';
-import BaseContainer from 'components/BaseContainer';
+import { Box, BoxProps } from '@chakra-ui/react';
 
-type {{pascalCase name}}Props = {};
+type {{pascalCase name}}ComponentProps = BoxProps & {};
 
-const {{pascalCase name}}: FC<{{pascalCase name}}Props> = () => {
+const {{pascalCase name}}Component: React.FC<{{pascalCase name}}ComponentProps> = (props) => {
     return (
-      <BaseContainer>
-        <Heading>{{pascalCase name}}</Heading>
-      </BaseContainer>
+      <Box {...props}>{{pascalCase name}}</Box>
     )
 };
 
-export default {{pascalCase name}};
+export default {{pascalCase name}}Component;

@@ -1,6 +1,6 @@
 const Switch = {
   defaultProps: {
-    colorScheme: 'primary'
+    colorScheme: 'rose'
   }
 };
 

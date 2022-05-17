@@ -1,29 +1,32 @@
 import Head from 'next/head';
 import { AppProps } from 'next/app';
-import { ChakraProvider } from '@chakra-ui/react';
+import { ChakraProvider, SlideFade } from '@chakra-ui/react';
 
-import theme from 'theme';
-import CompanyBar from 'components/CompanyBar';
-import Topbar from 'components/Topbar';
-import { SlideFade } from '@chakra-ui/react';
+import theme from '../theme';
+import { DynamicFooterComponent, DynamicHeaderComponent } from 'src/components';
+import { CompanyProvider } from 'src/contexts/CompanyContext';
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps, router }: AppProps) {
   return (
-    <ChakraProvider resetCSS theme={theme}>
-      <Head>
-        <title>Milkshake Web</title>
+    <CompanyProvider>
+      <ChakraProvider resetCSS theme={theme}>
+        <Head>
+          <title>Milkshake</title>
+          <meta name="description" content="Milkshake" />
+        </Head>
 
-        <meta name="description" content="Milkshake Web" />
-      </Head>
+        {/* header */}
+        <DynamicHeaderComponent />
 
-      <CompanyBar />
-      <Topbar />
+        {/* content */}
+        <SlideFade key={router.route} in offsetY={25}>
+          <Component {...pageProps} />
+        </SlideFade>
 
-      <SlideFade in>
-        <Component {...pageProps} />
-      </SlideFade>
-
-    </ChakraProvider>
+        {/* footer */}
+        <DynamicFooterComponent />
+      </ChakraProvider>
+    </CompanyProvider>
   );
 }
 
