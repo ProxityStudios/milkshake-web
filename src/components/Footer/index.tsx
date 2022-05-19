@@ -5,7 +5,7 @@ import NextLink from "next/link";
 const FooterComponent = () => {
   return (
     <Container maxW="container.xl">
-      <Flex justifyContent="space-between" alignItems="center" py="6">
+      <Flex justifyContent="space-between" alignItems="center" py="14">
         <Text color="black.muted">&copy; {new Date().getFullYear()} Proxity Studios—All Rights Reserved</Text>
         <NextLink href="/about-us#hero-section" passHref>
           <Button rightIcon={<LinkIcon ml="-1" fontSize="lg" />} variant={"link"}>

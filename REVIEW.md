@@ -14,4 +14,5 @@ known issues:
 
 todo:
      make image component using chakra and next/image
+     compact change log system
      <!-- add eslint -->
