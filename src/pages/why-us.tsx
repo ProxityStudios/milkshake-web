@@ -5,18 +5,18 @@ import Head from 'next/head';
 import { DynamicPageComponent } from '../components';
 
 const WhyUsPage: NextPage = () => {
-     return (
-          <DynamicPageComponent>
-               <Head>
-                    <title>Why Us? | Milkshake</title>
-                    <meta name="description" content="Why Us?" />
-               </Head>
+	return (
+		<DynamicPageComponent>
+			<Head>
+				<title>Why Us? | Milkshake</title>
+				<meta name="description" content="Why Us?" />
+			</Head>
 
-               <Heading size="xl" color="rose.base">
-                    Why Us?
-               </Heading>
-          </DynamicPageComponent>
-     );
+			<Heading size="xl" color="rose.base">
+				Why Us?
+			</Heading>
+		</DynamicPageComponent>
+	);
 };
 
 export default WhyUsPage;

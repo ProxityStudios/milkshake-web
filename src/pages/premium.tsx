@@ -5,18 +5,18 @@ import Head from 'next/head';
 import { DynamicPageComponent } from '../components';
 
 const PremiumPage: NextPage = () => {
-     return (
-          <DynamicPageComponent>
-               <Head>
-                    <title>Premium | Milkshake</title>
-                    <meta name="description" content="Premium" />
-               </Head>
+	return (
+		<DynamicPageComponent>
+			<Head>
+				<title>Premium | Milkshake</title>
+				<meta name="description" content="Premium" />
+			</Head>
 
-               <Heading size="xl" color="rose.base">
-                    Premium
-               </Heading>
-          </DynamicPageComponent>
-     );
+			<Heading size="xl" color="rose.base">
+				Premium
+			</Heading>
+		</DynamicPageComponent>
+	);
 };
 
 export default PremiumPage;

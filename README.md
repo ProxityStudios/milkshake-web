@@ -2,7 +2,7 @@ TODO: write detailed version of project
 
 # Official website for Milkshake Bot
 
--    [Support](https://discord.gg/5wWKnCNekm)
+-   [Support](https://discord.gg/5wWKnCNekm)
 
 ## Developing
 
