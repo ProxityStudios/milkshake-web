@@ -9,8 +9,8 @@ import {
 	Heading,
 	Text,
 } from '@chakra-ui/react';
-import { FC, ReactNode } from 'react';
 import Image from 'next/image';
+import { ReactNode } from 'react';
 
 const ChakraImage = chakra(Image);
 
@@ -22,7 +22,7 @@ export type HeroComponentProps = FlexProps & {
 	image?: any;
 };
 
-const HeroComponent: FC<HeroComponentProps> = ({
+const HeroComponent: React.FC<HeroComponentProps> = ({
 	heading,
 	text,
 	additions,

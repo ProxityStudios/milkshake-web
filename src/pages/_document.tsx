@@ -8,8 +8,8 @@ export default class Document extends NextDocument {
 		return (
 			<Html>
 				<Head>
-					<link rel="shortcut icon" href="/img/milkshake-logo.png" />
-					<link rel="apple-touch-icon" href="/img/milkshake-logo.png" />
+					<link rel="shortcut icon" href="/milkshake-logo.png" />
+					<link rel="apple-touch-icon" href="/milkshake-logo.png" />
 					<link rel="manifest" href="/manifest.json" />
 					<link rel="preconnect" href="https://fonts.googleapis.com" />
 					<link rel="preconnect" href="https://fonts.gstatic.com" />

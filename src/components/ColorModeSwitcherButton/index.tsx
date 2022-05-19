@@ -7,10 +7,11 @@ type ColorModeSwitcherButtonProps = {};
 
 const ColorModeSwitcherButton: React.FC<ColorModeSwitcherButtonProps> = (props) => {
 	const { toggleColorMode } = useColorMode();
-	const icon = useColorModeValue(<MoonIcon fontSize="xl" />, <SunIcon fontSize="xl" />);
+	const icon = useColorModeValue(<MoonIcon />, <SunIcon />);
 
 	return (
 		<IconButtonComponent
+			size="lg"
 			tooltipLabel="Change Color Mode"
 			aria-label="Change Color Mode"
 			onClick={toggleColorMode}

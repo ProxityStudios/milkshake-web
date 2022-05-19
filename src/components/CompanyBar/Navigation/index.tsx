@@ -1,7 +1,7 @@
 import { ExternalLinkIcon } from '@chakra-ui/icons';
 import { HStack, StackProps, Link } from '@chakra-ui/react';
 import { ChakraComponent } from '@chakra-ui/system';
-import Constants from 'src/constants';
+import Constants from '../../../constants';
 
 type CompanyBarNavigationComponentProps = ChakraComponent<'div', StackProps> & {};
 

@@ -1,8 +1,8 @@
 import { HStack, StackProps, useToast } from '@chakra-ui/react';
 import { ViewIcon } from '@chakra-ui/icons';
 
-import IconButtonComponent from 'src/components/IconButton';
-import { useCompanyUpdateContext } from 'src/contexts/CompanyContext';
+import IconButtonComponent from '../../../components/IconButton';
+import { useCompanyUpdateContext } from '../../../contexts/CompanyContext';
 
 type CompanyBarToolsComponentProps = StackProps & {};
 
@@ -23,7 +23,7 @@ const CompanyBarToolsComponent: React.FC<CompanyBarToolsComponentProps> = (props
 				}}
 				tooltipLabel={'Company Bar Size'}
 				aria-label={'Company Bar Size'}
-				icon={<ViewIcon fontSize="xl" />}
+				icon={<ViewIcon />}
 			/>
 		</HStack>
 	);

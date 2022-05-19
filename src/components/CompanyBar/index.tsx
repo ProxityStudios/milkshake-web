@@ -22,10 +22,10 @@ import Image from 'next/image';
 
 import CompanyBarNavigationComponent from './Navigation';
 import CompanyBarUsefullLinksComponent from './UsefullLinks';
-import CompanyLogo from 'src/assets/images/proxity-studios-logo-512.png';
+import CompanyLogo from '../../assets/images/proxity-studios-logo-512.png';
 import CompanyBarToolsComponent from './Tools';
-import Constants from 'src/constants';
-import { useCompanyContext, useCompanyUpdateContext } from 'src/contexts/CompanyContext';
+import Constants from '../../constants';
+import { useCompanyContext, useCompanyUpdateContext } from '../../contexts/CompanyContext';
 
 const ChakraImage = chakra(Image);
 type CompanyBarProps = ContainerProps & {};

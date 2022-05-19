@@ -1,5 +1,5 @@
-import { DynamicCompanyBarComponent, DynamicNavigationBarComponent } from '..';
 import { Alert, AlertTitle, AlertIcon, AlertDescription } from '@chakra-ui/react';
+import { DynamicCompanyBarComponent, DynamicNavigationBarComponent } from '..';
 
 const HeaderComponent = () => {
 	return (

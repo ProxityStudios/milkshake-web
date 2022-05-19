@@ -16,11 +16,10 @@ import { LinkIcon } from '@chakra-ui/icons';
 import NextLink from 'next/link';
 import Image from 'next/image';
 
-import MilkshakeLogo from 'src/assets/images/milkshake-logo.png';
+import MilkshakeLogo from '../../assets/images/milkshake-logo.png';
 import ColorModeSwitcherButton from '../ColorModeSwitcherButton';
 
 const ChakraImage = chakra(Image);
-
 type NavigationBarProps = ContainerProps & {};
 
 const NavigationBar: React.FC<NavigationBarProps> = (props) => {

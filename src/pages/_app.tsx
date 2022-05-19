@@ -1,10 +1,10 @@
 import Head from 'next/head';
 import { AppProps } from 'next/app';
-import { ChakraProvider, SlideFade } from '@chakra-ui/react';
+import { Center, ChakraProvider, SlideFade } from '@chakra-ui/react';
 
 import theme from '../theme';
-import { DynamicFooterComponent, DynamicHeaderComponent } from 'src/components';
-import { CompanyProvider } from 'src/contexts/CompanyContext';
+import { DynamicFooterComponent, DynamicHeaderComponent, DynamicPageShortcutsComponent } from '../components';
+import { CompanyProvider } from '../contexts/CompanyContext';
 
 function MyApp({ Component, pageProps, router }: AppProps) {
 	return (
@@ -14,6 +14,11 @@ function MyApp({ Component, pageProps, router }: AppProps) {
 					<title>Milkshake</title>
 					<meta name="description" content="Milkshake" />
 				</Head>
+
+				{/* page shortcuts */}
+				<Center mr="4" pos="fixed" top="75%" bottom="25%" right="0" translateY="-50%">
+					<DynamicPageShortcutsComponent />
+				</Center>
 
 				{/* header */}
 				<DynamicHeaderComponent />
