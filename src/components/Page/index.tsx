@@ -10,7 +10,7 @@ const PageComponent: React.FC<PageComponentProps> = ({ boxprops, hero, ...props 
   return (
     <Box {...boxprops}>
       {hero && hero}
-      <Container maxW="container.lg" {...props} />
+      <Container maxW="container.xl" {...props} />
     </Box>
   );
 };

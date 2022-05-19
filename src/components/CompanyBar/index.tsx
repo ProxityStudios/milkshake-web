@@ -1,4 +1,6 @@
-import { DarkMode, Box, Button, Container, Link, ContainerProps, Flex, Image, HStack, StackDivider, SlideFade, Menu, MenuButton, MenuList, MenuItem, Portal } from '@chakra-ui/react';
+import { DarkMode, Box, Button, Container, Link, ContainerProps, Flex, HStack, StackDivider, SlideFade, Menu, MenuButton, MenuList, MenuItem, Portal, chakra, Circle } from '@chakra-ui/react';
+import { ChevronDownIcon, ExternalLinkIcon, RepeatIcon } from '@chakra-ui/icons';
+import Image from "next/image";
 
 import CompanyBarNavigationComponent from './Navigation';
 import CompanyBarUsefullLinksComponent from './UsefullLinks';
@@ -6,8 +8,9 @@ import CompanyLogo from "src/assets/images/proxity-studios-logo-512.png";
 import CompanyBarToolsComponent from './Tools';
 import Constants from 'src/constants';
 import { useCompanyContext, useCompanyUpdateContext } from 'src/contexts/CompanyContext';
-import { ChevronDownIcon, ExternalLinkIcon, RepeatIcon } from '@chakra-ui/icons';
 
+
+const ChakraImage = chakra(Image);
 type CompanyBarProps = ContainerProps & {};
 
 const CompanyBar: React.FC<CompanyBarProps> = (props) => {
@@ -17,7 +20,7 @@ const CompanyBar: React.FC<CompanyBarProps> = (props) => {
   return (
     <DarkMode>
       <Box bg="#202020" color="white" overflow="hidden">
-        <Container maxW={companyContext.bar.isWide ? "initial" : "container.xl"} py="3" {...props}>
+        <Container maxW={companyContext.bar.isWide ? "initial" : "container.xl"} py="4" {...props}>
           <Flex alignItems="center" justifyContent="space-between">
 
             {/* left side */}
@@ -30,9 +33,11 @@ const CompanyBar: React.FC<CompanyBarProps> = (props) => {
 
             {/* center */}
             <Flex alignItems="center" pos="absolute" left="50%" right="50%" transform="translateX(-50%)" w="max-content">
-              <Link href={Constants.Company.BaseURI} isExternal>
-                <Image boxSize="55" src={CompanyLogo.src} alt="Company Logo" />
-              </Link>
+              <Circle as={Link} href={Constants.Company.BaseURI} isExternal>
+                <Box boxSize="14">
+                  <ChakraImage loading='lazy' placeholder="blur" borderRadius="full" src={CompanyLogo} alt="Company Logo" />
+                </Box>
+              </Circle>
             </Flex>
 
             {/* right side */}

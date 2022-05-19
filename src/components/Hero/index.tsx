@@ -1,17 +1,20 @@
-import { Box, Button, Center, Container, Image, FlexProps, Grid, GridItem, Heading, Text, Flex } from '@chakra-ui/react';
+import { chakra, Box, Center, Container, FlexProps, Grid, GridItem, Heading, Text } from '@chakra-ui/react';
 import { FC, ReactNode } from 'react';
+import Image from "next/image";
+
+const ChakraImage = chakra(Image);
 
 export type HeroComponentProps = FlexProps & {
   heading: string;
   text?: string;
   additions?: ReactNode;
   leftAdditions?: ReactNode;
-  image?: string;
+  image?: any;
 };
 
 const HeroComponent: FC<HeroComponentProps> = ({ heading, text, additions, leftAdditions, image, ...props }) => {
   return (
-    <Center as="section" id="hero-section" minH="md" py="24">
+    <Center as="section" id="hero-section" minH="md" py="32">
       <Container as={Grid} gridGap="10" gridTemplateColumns={`repeat(2, 1fr)`} maxW="container.lg" {...props}>
         <GridItem as={Center} flexDirection="column" alignItems="flex-start">
           <Box>
@@ -22,7 +25,9 @@ const HeroComponent: FC<HeroComponentProps> = ({ heading, text, additions, leftA
             {leftAdditions}
           </Box>}
         </GridItem>
-        <GridItem as={Image} src={image} borderRadius="lg" alt={"Hero Image"} />
+        <GridItem>
+          <ChakraImage loading='lazy' placeholder="blur" src={image} borderRadius="lg" alt={"Hero Image"} />
+        </GridItem>
         {additions && additions}
       </Container>
     </Center>

@@ -12,7 +12,7 @@ const Index: NextPage = () => {
         <DynamicHeroComponent
           heading="Fast. Secure. Easier. Forever!"
           text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam nisi impedit."
-          image={MilkshakeLogo.src}
+          image={MilkshakeLogo}
           leftAdditions={<>
             <Button size="lg" leftIcon={<StarIcon fontSize="xl" />}>
               Get Started

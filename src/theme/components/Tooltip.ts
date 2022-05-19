@@ -1,4 +1,6 @@
-const Tooltip = {
+import { ComponentStyleConfig } from "@chakra-ui/react";
+
+const Tooltip: ComponentStyleConfig = {
      baseStyle: {
           borderRadius: "md",
           px: "4"

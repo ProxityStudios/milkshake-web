@@ -1,7 +1,7 @@
 known issues:
      border colours of inputs
      bg opacity of toasts
-     link bugs on main navbar
+     <!-- link bugs on main navbar -->
      bg color of alerts
      StackDivider color changes on forcely selected color mode
      *dev* type errors for context actions
@@ -9,7 +9,9 @@ known issues:
      bg color of MenuList
      default fontSize of icons
      locked color mode bug on MenuList
-     image optimiziations
+     state management to local storage
+     <!-- image optimi. -->
 
 todo:
-     add eslint
+     make image component using chakra and next/image
+     <!-- add eslint -->
