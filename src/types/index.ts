@@ -9,8 +9,8 @@ export interface CompanyUpdateContextActions {
      /**
       * Toggles bar size to wide or not.
       */
-     toggleBarSize?(): void;
-     signInUser?(): CompanyContextState["user"];
+     toggleBarSize(): void;
+     signInUser(): CompanyContextState["user"];
 }
 
 export interface CompanyContextState {

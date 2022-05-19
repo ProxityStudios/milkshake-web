@@ -4,7 +4,7 @@ known issues:
      <!-- link bugs on main navbar -->
      bg color of alerts
      StackDivider color changes on forcely selected color mode
-     *dev* type errors for context actions
+     <!-- *dev* type errors for context actions -->
      default zIndex of MenuList
      bg color of MenuList
      default fontSize of icons

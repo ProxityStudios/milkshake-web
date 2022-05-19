@@ -15,10 +15,10 @@ const INITIAL_STATE: CompanyContextState = {
 };
 
 export const CompanyContext = createContext<CompanyContextState>(INITIAL_STATE);
-export const CompanyUpdateContext = createContext({});
+export const CompanyUpdateContext = createContext<CompanyUpdateContextActions | {}>({});
 
 export const useCompanyContext = () => useContext(CompanyContext);
-export const useCompanyUpdateContext = () => useContext<CompanyUpdateContextActions>(CompanyUpdateContext);
+export const useCompanyUpdateContext = () => useContext(CompanyUpdateContext) as CompanyUpdateContextActions;
 
 export function CompanyProvider({ children }: { children: ReactNode; }) {
      const [bar, setBar] = useState(INITIAL_STATE.bar);
