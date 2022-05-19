@@ -18,7 +18,7 @@ export interface CompanyContextState {
           isWide: boolean;
      };
      user: {
-          isLogged: boolean | null,
+          isLoggedIn: boolean | null,
           username: string | null,
           displayName: string | null,
           email: string | null,

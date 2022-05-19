@@ -6,7 +6,7 @@ const INITIAL_STATE: CompanyContextState = {
           isWide: false
      },
      user: {
-          isLogged: false,
+          isLoggedIn: false,
           username: null,
           displayName: null,
           email: null,

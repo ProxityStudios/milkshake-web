@@ -45,7 +45,7 @@ const CompanyBar: React.FC<CompanyBarProps> = (props) => {
               <Flex alignItems="center">
                 <CompanyBarNavigationComponent mr="6" />
                 {
-                  companyContext.user.isLogged ? <>
+                  companyContext.user.isLoggedIn ? <>
                     <Menu>
                       <MenuButton
                         as={Button}
@@ -67,7 +67,7 @@ const CompanyBar: React.FC<CompanyBarProps> = (props) => {
                     </Menu>
                   </> :
                     <Button variant="outline" onClick={() => companyUpdateContext.signInUser({
-                      isLogged: true,
+                      isLoggedIn: true,
                       displayName: "Crawl",
                       email: "crawl@proxitystudios.tk",
                       password: "supersecretpassword",
