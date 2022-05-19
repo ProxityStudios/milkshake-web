@@ -1,5 +1,5 @@
 const Company = {
-     BaseURI: "https://proxitystudios.tk"
+     BaseURI: 'https://proxitystudios.tk',
 };
 
 const Constants = { Company };

@@ -2,17 +2,17 @@ import { Box, BoxProps, Container, ContainerProps } from '@chakra-ui/react';
 import { ReactNode } from 'react';
 
 type PageComponentProps = ContainerProps & {
-  boxprops?: BoxProps;
-  hero?: ReactNode;
+     boxprops?: BoxProps;
+     hero?: ReactNode;
 };
 
 const PageComponent: React.FC<PageComponentProps> = ({ boxprops, hero, ...props }) => {
-  return (
-    <Box {...boxprops}>
-      {hero && hero}
-      <Container maxW="container.xl" {...props} />
-    </Box>
-  );
+     return (
+          <Box {...boxprops}>
+               {hero && hero}
+               <Container maxW="container.xl" {...props} />
+          </Box>
+     );
 };
 
 export default PageComponent;

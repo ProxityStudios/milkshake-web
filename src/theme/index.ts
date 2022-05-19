@@ -13,18 +13,18 @@ import Switch from './components/Switch';
 import Tooltip from './components/Tooltip';
 
 const customTheme: ThemeOverride = {
-  styles,
-  fonts,
-  config,
-  colors,
-  shadows,
-  breakpoints,
-  components: {
-    Button,
-    Switch,
-    Tooltip
-  },
-  direction: 'ltr',
+     styles,
+     fonts,
+     config,
+     colors,
+     shadows,
+     breakpoints,
+     components: {
+          Button,
+          Switch,
+          Tooltip,
+     },
+     direction: 'ltr',
 };
 
 export default extendTheme(customTheme);

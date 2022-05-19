@@ -1,20 +1,8 @@
-import dynamic from "next/dynamic";
+import dynamic from 'next/dynamic';
 
-export const DynamicHeaderComponent = dynamic(() => import('./Header'), {
-     loading: () => <>loading</>
-});
-export const DynamicFooterComponent = dynamic(() => import('./Footer'), {
-     loading: () => <>loading</>
-});
-export const DynamicNavigationBarComponent = dynamic(() => import('./NavigationBar'), {
-     loading: () => <>loading</>
-});
-export const DynamicCompanyBarComponent = dynamic(() => import('./CompanyBar'), {
-     loading: () => <>loading</>
-});
-export const DynamicPageComponent = dynamic(() => import('./Page'), {
-     loading: () => <>loading</>
-});
-export const DynamicHeroComponent = dynamic(() => import('./Hero'), {
-     loading: () => <>loading</>
-});
+export const DynamicHeaderComponent = dynamic(() => import('./Header'));
+export const DynamicFooterComponent = dynamic(() => import('./Footer'));
+export const DynamicNavigationBarComponent = dynamic(() => import('./NavigationBar'));
+export const DynamicCompanyBarComponent = dynamic(() => import('./CompanyBar'));
+export const DynamicPageComponent = dynamic(() => import('./Page'));
+export const DynamicHeroComponent = dynamic(() => import('./Hero'));

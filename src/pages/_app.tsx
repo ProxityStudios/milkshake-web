@@ -7,27 +7,27 @@ import { DynamicFooterComponent, DynamicHeaderComponent } from 'src/components';
 import { CompanyProvider } from 'src/contexts/CompanyContext';
 
 function MyApp({ Component, pageProps, router }: AppProps) {
-  return (
-    <CompanyProvider>
-      <ChakraProvider resetCSS theme={theme}>
-        <Head>
-          <title>Milkshake</title>
-          <meta name="description" content="Milkshake" />
-        </Head>
+     return (
+          <CompanyProvider>
+               <ChakraProvider resetCSS theme={theme}>
+                    <Head>
+                         <title>Milkshake</title>
+                         <meta name="description" content="Milkshake" />
+                    </Head>
 
-        {/* header */}
-        <DynamicHeaderComponent />
+                    {/* header */}
+                    <DynamicHeaderComponent />
 
-        {/* content */}
-        <SlideFade key={router.route} in offsetY={25}>
-          <Component {...pageProps} />
-        </SlideFade>
+                    {/* content */}
+                    <SlideFade key={router.route} in offsetY={25}>
+                         <Component {...pageProps} />
+                    </SlideFade>
 
-        {/* footer */}
-        <DynamicFooterComponent />
-      </ChakraProvider>
-    </CompanyProvider>
-  );
+                    {/* footer */}
+                    <DynamicFooterComponent />
+               </ChakraProvider>
+          </CompanyProvider>
+     );
 }
 
 export default MyApp;

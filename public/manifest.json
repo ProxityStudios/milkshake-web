@@ -1,16 +1,16 @@
 {
-  "name": "Milkshake",
-  "short_name": "Milkshake",
-  "icons": [
-    {
-      "src": "/milkshake-logo.png",
-      "type": "image/png",
-      "sizes": "48x48"
-    }
-  ],
-  "description": "Official Milkshake's Website.",
-  "display": "fullscreen",
-  "start_url": "/",
-  "background_color": "#000",
-  "theme_color": "#000"
+     "name": "Milkshake",
+     "short_name": "Milkshake",
+     "icons": [
+          {
+               "src": "/milkshake-logo.png",
+               "type": "image/png",
+               "sizes": "48x48"
+          }
+     ],
+     "description": "Official Milkshake's Website.",
+     "display": "fullscreen",
+     "start_url": "/",
+     "background_color": "#000",
+     "theme_color": "#000"
 }
