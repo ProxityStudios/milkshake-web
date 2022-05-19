@@ -1,3 +1,6 @@
+/**
+ * @param {import('plop').NodePlopAPI} plop 
+ */
 module.exports = (plop) => {
      plop.setGenerator('component', {
           description: 'Create a component',

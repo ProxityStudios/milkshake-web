@@ -10,6 +10,7 @@
 -   locked color mode bug on MenuList
 -   state management to local storage
 -   custom breakpoints
+-   typescript version
 
 ### To Do
 
