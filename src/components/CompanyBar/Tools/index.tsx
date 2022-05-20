@@ -1,5 +1,5 @@
-import { HStack, StackProps, useToast } from '@chakra-ui/react';
-import { ViewIcon } from '@chakra-ui/icons';
+import { HStack, StackProps, useToast, Icon } from '@chakra-ui/react';
+import { CgViewSplit } from "react-icons/cg";
 
 import IconButtonComponent from '../../../components/IconButton';
 import { useCompanyUpdateContext } from '../../../contexts/CompanyContext';
@@ -18,12 +18,12 @@ const CompanyBarToolsComponent: React.FC<CompanyBarToolsComponentProps> = (props
 					toast({
 						status: 'success',
 						title: 'Size of Company Bar has Changed!',
-						description: 'COMPANY_BAR_TOOLS_BAR_SIZE',
+						description: 'Successfully changed size of company bar.',
 					});
 				}}
 				tooltipLabel={'Company Bar Size'}
 				aria-label={'Company Bar Size'}
-				icon={<ViewIcon />}
+				icon={<Icon as={CgViewSplit} />}
 			/>
 		</HStack>
 	);

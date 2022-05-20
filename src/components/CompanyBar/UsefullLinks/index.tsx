@@ -1,5 +1,6 @@
-import { HStack, StackProps, Link } from '@chakra-ui/react';
-import { InfoIcon, NotAllowedIcon } from '@chakra-ui/icons';
+import { HStack, StackProps, Link, Icon } from '@chakra-ui/react';
+import { SiDiscord, SiGithub } from "react-icons/si";
+import { BiSupport } from "react-icons/bi";
 
 import { UsefullLink } from '../../../types';
 import IconButtonComponent from '../../IconButton';
@@ -10,24 +11,22 @@ type CompanyBarUsefullLinksComponentProps = StackProps & {
 };
 
 const CompanyBarUsefullLinksComponent: React.FC<CompanyBarUsefullLinksComponentProps> = (props) => {
-	const usefullLinkIconSize = 'xl';
-
 	const links: UsefullLink[] = [
 		{
 			url: Constants.Company.BaseURI + '/support-center',
-			icon: <InfoIcon />,
+			icon: <Icon as={BiSupport} />,
 			tooltip: 'Support Center',
 			isExternal: true,
 		},
 		{
 			url: Constants.Company.BaseURI + '/discord',
-			icon: <NotAllowedIcon />,
+			icon: <Icon as={SiDiscord} />,
 			tooltip: 'Discord',
 			isExternal: true,
 		},
 		{
 			url: Constants.Company.BaseURI + '/github',
-			icon: <NotAllowedIcon />,
+			icon: <Icon as={SiGithub} />,
 			tooltip: 'Github',
 			isExternal: true,
 		},
