@@ -1,6 +1,10 @@
 import { Button, Heading, Link } from '@chakra-ui/react';
 import { NextPage } from 'next';
-import { DynamicHeroComponent, DynamicPageComponent, DynamicPageShortcutsComponent } from '../components';
+import {
+	DynamicHeroComponent,
+	DynamicPageComponent,
+	DynamicPageShortcutsComponent,
+} from '../components';
 import { StarIcon, ArrowForwardIcon } from '@chakra-ui/icons';
 
 import MilkshakeLogo from '../assets/images/milkshake-logo.png';
