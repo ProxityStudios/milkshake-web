@@ -1,6 +1,6 @@
 import { HStack, StackProps, Link, Icon } from '@chakra-ui/react';
-import { SiDiscord, SiGithub } from "react-icons/si";
-import { BiSupport } from "react-icons/bi";
+import { SiDiscord, SiGithub } from 'react-icons/si';
+import { BiSupport } from 'react-icons/bi';
 
 import { UsefullLink } from '../../../types';
 import IconButtonComponent from '../../IconButton';
@@ -16,21 +16,21 @@ const CompanyBarUsefullLinksComponent: React.FC<CompanyBarUsefullLinksComponentP
 			url: Constants.Company.BaseURI + '/support-center',
 			icon: <Icon as={BiSupport} />,
 			tooltip: 'Support Center',
-			isExternal: true,
+			isExternal: true
 		},
 		{
 			url: Constants.Company.BaseURI + '/discord',
 			icon: <Icon as={SiDiscord} />,
 			tooltip: 'Discord',
-			isExternal: true,
+			isExternal: true
 		},
 		{
 			url: Constants.Company.BaseURI + '/github',
 			icon: <Icon as={SiGithub} />,
 			tooltip: 'Github',
-			isExternal: true,
+			isExternal: true
 		},
-		...(props.links ?? []),
+		...(props.links ?? [])
 	];
 
 	return (

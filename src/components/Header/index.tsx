@@ -7,9 +7,7 @@ const HeaderComponent = () => {
 			<Alert justifyContent="center">
 				<AlertIcon />
 				<AlertTitle>Light Mode is Released!</AlertTitle>
-				<AlertDescription>
-					If you found a bug, please report it to our support center!
-				</AlertDescription>
+				<AlertDescription>If you found a bug, please report it to our support center!</AlertDescription>
 			</Alert>
 
 			{/* company bar */}

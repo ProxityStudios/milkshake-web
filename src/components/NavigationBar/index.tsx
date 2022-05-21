@@ -10,7 +10,7 @@ import {
 	Link,
 	useColorModeValue,
 	chakra,
-	Box,
+	Box
 } from '@chakra-ui/react';
 import { LinkIcon } from '@chakra-ui/icons';
 import NextLink from 'next/link';
@@ -45,13 +45,7 @@ const NavigationBar: React.FC<NavigationBarProps> = (props) => {
 				<Link as={NextLink} href="/" passHref>
 					<LinkBox cursor="pointer" as={Flex} alignItems="center">
 						<Box boxSize="16">
-							<ChakraImage
-								loading="lazy"
-								placeholder="blur"
-								borderRadius="full"
-								src={MilkshakeLogo}
-								alt="Milkshake Logo"
-							/>
+							<ChakraImage loading="lazy" placeholder="blur" borderRadius="full" src={MilkshakeLogo} alt="Milkshake Logo" />
 						</Box>
 						<Heading as="h3" size="md" letterSpacing="wider" ml="3">
 							Milkshake

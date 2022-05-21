@@ -1,4 +1,4 @@
-import { BaseThemeWithExtensions, ChakraTheme, extendTheme, ThemeOverride } from '@chakra-ui/react';
+import { extendTheme, ThemeOverride } from '@chakra-ui/react';
 
 import styles from './styles';
 
@@ -22,9 +22,9 @@ const customTheme: ThemeOverride = {
 	components: {
 		Button,
 		Switch,
-		Tooltip,
+		Tooltip
 	},
-	direction: 'ltr',
+	direction: 'ltr'
 };
 
 export default extendTheme(customTheme);

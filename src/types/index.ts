@@ -8,13 +8,13 @@ export interface UsefullLink {
 export interface CompanyUpdateContextActions {
 	/**
 	 * Toggles bar size to wide or not.
-	 * 
+	 *
 	 */
 	toggleBarSize(): void;
 	/**
 	 * Sign in the user to context
 	 * @version 1.0.0
-	 * @param payload 
+	 * @param payload
 	 */
 	signInUser(payload: CompanyContextState['user']): typeof payload;
 }

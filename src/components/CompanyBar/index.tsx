@@ -15,7 +15,7 @@ import {
 	MenuItem,
 	Portal,
 	chakra,
-	Circle,
+	Circle
 } from '@chakra-ui/react';
 import { ChevronDownIcon, ExternalLinkIcon, RepeatIcon } from '@chakra-ui/icons';
 import Image from 'next/image';
@@ -37,11 +37,7 @@ const CompanyBar: React.FC<CompanyBarProps> = (props) => {
 	return (
 		<DarkMode>
 			<Box bg="#202020" color="white" overflow="hidden">
-				<Container
-					maxW={companyContext.bar.isWide ? 'initial' : 'container.xl'}
-					py="4"
-					{...props}
-				>
+				<Container maxW={companyContext.bar.isWide ? 'initial' : 'container.xl'} py="4" {...props}>
 					<Flex alignItems="center" justifyContent="space-between">
 						{/* left side */}
 						<SlideFade delay={0.5} in offsetX={-500}>
@@ -52,23 +48,10 @@ const CompanyBar: React.FC<CompanyBarProps> = (props) => {
 						</SlideFade>
 
 						{/* center */}
-						<Flex
-							alignItems="center"
-							pos="absolute"
-							left="50%"
-							right="50%"
-							transform="translateX(-50%)"
-							w="max-content"
-						>
+						<Flex alignItems="center" pos="absolute" left="50%" right="50%" transform="translateX(-50%)" w="max-content">
 							<Circle as={Link} href={Constants.Company.BaseURI} isExternal>
 								<Box boxSize="14">
-									<ChakraImage
-										loading="lazy"
-										placeholder="blur"
-										borderRadius="full"
-										src={CompanyLogo}
-										alt="Company Logo"
-									/>
+									<ChakraImage loading="lazy" placeholder="blur" borderRadius="full" src={CompanyLogo} alt="Company Logo" />
 								</Box>
 							</Circle>
 						</Flex>
@@ -79,27 +62,15 @@ const CompanyBar: React.FC<CompanyBarProps> = (props) => {
 								<CompanyBarNavigationComponent mr="6" />
 								{companyContext.user.isLoggedIn ? (
 									<Menu>
-										<MenuButton
-											as={Button}
-											rightIcon={<ChevronDownIcon />}
-											aria-label="My Profile"
-											icon
-											variant="outline"
-										>
+										<MenuButton as={Button} rightIcon={<ChevronDownIcon />} aria-label="My Profile" icon variant="outline">
 											{companyContext.user.displayName}
 										</MenuButton>
 										<Portal>
 											<MenuList zIndex={2}>
-												<MenuItem
-													icon={<ExternalLinkIcon fontSize="lg" />}
-													command="⌘N"
-												>
+												<MenuItem icon={<ExternalLinkIcon fontSize="lg" />} command="⌘N">
 													Profile
 												</MenuItem>
-												<MenuItem
-													icon={<RepeatIcon fontSize="lg" />}
-													command="⌘⇧N"
-												>
+												<MenuItem icon={<RepeatIcon fontSize="lg" />} command="⌘⇧N">
 													Open Closed Tab
 												</MenuItem>
 											</MenuList>
@@ -114,7 +85,7 @@ const CompanyBar: React.FC<CompanyBarProps> = (props) => {
 												displayName: 'Crawl',
 												email: 'crawl@proxitystudios.tk',
 												password: 'supersecretpassword',
-												username: 'crawl#0000',
+												username: 'crawl#0000'
 											})
 										}
 									>

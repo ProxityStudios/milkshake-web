@@ -2,18 +2,18 @@ import { ComponentStyleConfig } from '@chakra-ui/react';
 
 const Button: ComponentStyleConfig = {
 	baseStyle: {
-		fontWeight: 'bold',
+		fontWeight: 'bold'
 	},
 	variants: {
 		link: {
 			borderRadius: 'none',
 			py: '1',
 			_dark: {
-				color: 'white',
+				color: 'white'
 			},
-			color: 'black.base',
-		},
-	},
+			color: 'black.base'
+		}
+	}
 };
 
 export default Button;

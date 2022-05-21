@@ -3,23 +3,22 @@ import { CompanyContextState, CompanyUpdateContextActions } from '../types';
 
 const INITIAL_STATE: CompanyContextState = {
 	bar: {
-		isWide: false,
+		isWide: false
 	},
 	user: {
 		isLoggedIn: false,
 		username: null,
 		displayName: null,
 		email: null,
-		password: null,
-	},
+		password: null
+	}
 };
 
 export const CompanyContext = createContext<CompanyContextState>(INITIAL_STATE);
 export const CompanyUpdateContext = createContext<CompanyUpdateContextActions | {}>({});
 
 export const useCompanyContext = () => useContext(CompanyContext);
-export const useCompanyUpdateContext = () =>
-	useContext(CompanyUpdateContext) as CompanyUpdateContextActions;
+export const useCompanyUpdateContext = () => useContext(CompanyUpdateContext) as CompanyUpdateContextActions;
 
 export function CompanyProvider({ children }: { children: ReactNode }) {
 	const [bar, setBar] = useState(INITIAL_STATE.bar);
@@ -39,9 +38,7 @@ export function CompanyProvider({ children }: { children: ReactNode }) {
 
 	return (
 		<CompanyContext.Provider value={state}>
-			<CompanyUpdateContext.Provider value={actions}>
-				{children}
-			</CompanyUpdateContext.Provider>
+			<CompanyUpdateContext.Provider value={actions}>{children}</CompanyUpdateContext.Provider>
 		</CompanyContext.Provider>
 	);
 }

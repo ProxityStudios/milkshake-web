@@ -14,11 +14,7 @@ const CompanyBarNavigationComponent: CompanyBarNavigationComponentProps = (props
 			<Link letterSpacing="wide" href={Constants.Company.BaseURI + '/products'} isExternal>
 				Products <ExternalLinkIcon />
 			</Link>
-			<Link
-				letterSpacing="wide"
-				href={Constants.Company.BaseURI + '/terms-of-service'}
-				isExternal
-			>
+			<Link letterSpacing="wide" href={Constants.Company.BaseURI + '/terms-of-service'} isExternal>
 				Terms <ExternalLinkIcon />
 			</Link>
 		</HStack>

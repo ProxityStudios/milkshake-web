@@ -12,30 +12,10 @@ const PageShortcutsComponent: React.FC<PageShortcutsComponentProps> = (props) =>
 
 	return (
 		<Stack spacing="2" d="inline-flex" borderRadius="xl" p="3" as={Center} bg={bg} {...props}>
-			<IconButtonComponent
-				size="lg"
-				aria-label="Guild #1"
-				tooltipLabel="Guild #1"
-				icon={<QuestionIcon />}
-			/>
-			<IconButtonComponent
-				size="lg"
-				aria-label="Guild #2"
-				tooltipLabel="Guild #2"
-				icon={<QuestionIcon />}
-			/>
-			<IconButtonComponent
-				size="lg"
-				aria-label="Guild #3"
-				tooltipLabel="Guild #3"
-				icon={<QuestionIcon />}
-			/>
-			<IconButtonComponent
-				size="lg"
-				aria-label="Guild #4"
-				tooltipLabel="Guild #4"
-				icon={<QuestionIcon />}
-			/>
+			<IconButtonComponent size="lg" aria-label="Guild #1" tooltipLabel="Guild #1" icon={<QuestionIcon />} />
+			<IconButtonComponent size="lg" aria-label="Guild #2" tooltipLabel="Guild #2" icon={<QuestionIcon />} />
+			<IconButtonComponent size="lg" aria-label="Guild #3" tooltipLabel="Guild #3" icon={<QuestionIcon />} />
+			<IconButtonComponent size="lg" aria-label="Guild #4" tooltipLabel="Guild #4" icon={<QuestionIcon />} />
 		</Stack>
 	);
 };

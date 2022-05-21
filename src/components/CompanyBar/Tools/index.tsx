@@ -1,5 +1,5 @@
 import { HStack, StackProps, useToast, Icon } from '@chakra-ui/react';
-import { CgViewSplit } from "react-icons/cg";
+import { CgViewSplit } from 'react-icons/cg';
 
 import IconButtonComponent from '../../../components/IconButton';
 import { useCompanyUpdateContext } from '../../../contexts/CompanyContext';
@@ -18,7 +18,7 @@ const CompanyBarToolsComponent: React.FC<CompanyBarToolsComponentProps> = (props
 					toast({
 						status: 'success',
 						title: 'Size of Company Bar has Changed!',
-						description: 'Successfully changed size of company bar.',
+						description: 'Successfully changed size of company bar.'
 					});
 				}}
 				tooltipLabel={'Company Bar Size'}

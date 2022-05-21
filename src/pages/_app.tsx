@@ -3,11 +3,7 @@ import { AppProps } from 'next/app';
 import { Center, ChakraProvider, SlideFade } from '@chakra-ui/react';
 
 import theme from '../theme';
-import {
-	DynamicFooterComponent,
-	DynamicHeaderComponent,
-	DynamicPageShortcutsComponent,
-} from '../components';
+import { DynamicFooterComponent, DynamicHeaderComponent, DynamicPageShortcutsComponent } from '../components';
 import { CompanyProvider } from '../contexts/CompanyContext';
 
 function MyApp({ Component, pageProps, router }: AppProps) {
