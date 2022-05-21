@@ -4,6 +4,7 @@ import { DynamicHeroComponent, DynamicPageComponent } from '../components';
 import { StarIcon, ArrowForwardIcon } from '@chakra-ui/icons';
 
 import MilkshakeLogo from '../assets/images/milkshake-logo.png';
+import LoaderComponent from '../components/Loader';
 
 const Index: NextPage = () => {
 	return (
@@ -30,6 +31,8 @@ const Index: NextPage = () => {
 		>
 			<Heading h={1000} size="lg">
 				Something
+				<LoaderComponent size="lg" />
+
 			</Heading>
 		</DynamicPageComponent>
 	);

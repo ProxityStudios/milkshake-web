@@ -26,6 +26,8 @@ import CompanyLogo from '../../assets/images/proxity-studios-logo-512.png';
 import CompanyBarToolsComponent from './Tools';
 import Constants from '../../constants';
 import { useCompanyContext, useCompanyUpdateContext } from '../../contexts/CompanyContext';
+import { useState } from 'react';
+import LoaderComponent from '../Loader';
 
 const ChakraImage = chakra(Image);
 type CompanyBarProps = ContainerProps & {};
@@ -33,6 +35,21 @@ type CompanyBarProps = ContainerProps & {};
 const CompanyBar: React.FC<CompanyBarProps> = (props) => {
 	const companyContext = useCompanyContext();
 	const companyUpdateContext = useCompanyUpdateContext();
+	const [loading, setLoading] = useState<boolean>(false);
+
+	const signIn = () => {
+		setLoading(true);
+		setTimeout(() => {
+			companyUpdateContext.signInUser({
+				isLoggedIn: true,
+				displayName: 'Crawl',
+				email: 'crawl@proxitystudios.tk',
+				password: 'supersecretpassword',
+				username: 'crawl#0000'
+			});
+			setLoading(false);
+		}, 2000);
+	};
 
 	return (
 		<DarkMode>
@@ -79,14 +96,9 @@ const CompanyBar: React.FC<CompanyBarProps> = (props) => {
 								) : (
 									<Button
 										variant="outline"
-										onClick={() =>
-											companyUpdateContext.signInUser({
-												isLoggedIn: true,
-												displayName: 'Crawl',
-												email: 'crawl@proxitystudios.tk',
-												password: 'supersecretpassword',
-												username: 'crawl#0000'
-											})
+										isLoading={loading}
+										spinner={<LoaderComponent size="xs" />}
+										onClick={() => { setLoading(true); signIn(); }
 										}
 									>
 										Sign In

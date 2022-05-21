@@ -38,6 +38,8 @@ const CompanyBarUsefullLinksComponent: React.FC<CompanyBarUsefullLinksComponentP
 			{links.map((link, i) => (
 				<IconButtonComponent
 					tooltipLabel={link.tooltip}
+					variant="ghost"
+					fontSize="xl"
 					key={i}
 					href={link.url}
 					isExternal={link.isExternal}

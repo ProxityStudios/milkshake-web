@@ -16,13 +16,12 @@
 		"@chakra-ui/icons": "^1.0.5",
 		"@chakra-ui/react": "^1.4.2",
 		"@chakra-ui/theme-tools": "1.1.2",
-		"@emotion/react": "11.1.5",
-		"@emotion/styled": "11.1.5",
 		"framer-motion": "4.1.11",
 		"next": "12.1.5",
 		"react": "^17.0.2",
 		"react-dom": "^17.0.2",
-		"react-icons": "^4.3.1"
+		"react-icons": "^4.3.1",
+		"react-loader-spinner": "^6.0.0-0"
 	},
 	"devDependencies": {
 		"@types/node": "^14.6.0",

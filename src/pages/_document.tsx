@@ -6,7 +6,7 @@ import config from '../theme/foundations/config';
 export default class Document extends NextDocument {
 	render() {
 		return (
-			<Html>
+			<Html lang="en">
 				<Head>
 					<link rel="shortcut icon" href="/milkshake-logo.png" />
 					<link rel="apple-touch-icon" href="/milkshake-logo.png" />

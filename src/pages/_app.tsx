@@ -5,8 +5,18 @@ import { Center, ChakraProvider, SlideFade } from '@chakra-ui/react';
 import theme from '../theme';
 import { DynamicFooterComponent, DynamicHeaderComponent, DynamicPageShortcutsComponent } from '../components';
 import { CompanyProvider } from '../contexts/CompanyContext';
+import { useEffect, useState } from 'react';
+import LoaderComponent from '../components/Loader';
 
 function MyApp({ Component, pageProps, router }: AppProps) {
+	const [routeLoading, setRouteLoading] = useState<boolean>(false);
+
+	useEffect(() => {
+		router.events.on('routeChangeStart', () => setRouteLoading(true));
+		router.events.on('routeChangeComplete', () => setRouteLoading(false));
+		router.events.on('routeChangeError', () => setRouteLoading(false));
+	}, []);
+
 	return (
 		<CompanyProvider>
 			<ChakraProvider resetCSS theme={theme}>
@@ -24,9 +34,9 @@ function MyApp({ Component, pageProps, router }: AppProps) {
 				<DynamicHeaderComponent />
 
 				{/* content */}
-				<SlideFade key={router.route} in offsetY={25}>
+				{routeLoading ? <Center py="20"><LoaderComponent size="lg" /></Center> : <SlideFade key={router.route} in offsetY={25}>
 					<Component {...pageProps} />
-				</SlideFade>
+				</SlideFade>}
 
 				{/* footer */}
 				<DynamicFooterComponent />
