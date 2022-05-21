@@ -98,8 +98,10 @@ const CompanyBar: React.FC<CompanyBarProps> = (props) => {
 										variant="outline"
 										isLoading={loading}
 										spinner={<LoaderComponent size="xs" />}
-										onClick={() => { setLoading(true); signIn(); }
-										}
+										onClick={() => {
+											setLoading(true);
+											signIn();
+										}}
 									>
 										Sign In
 									</Button>

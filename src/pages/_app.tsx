@@ -34,9 +34,15 @@ function MyApp({ Component, pageProps, router }: AppProps) {
 				<DynamicHeaderComponent />
 
 				{/* content */}
-				{routeLoading ? <Center py="20"><LoaderComponent size="lg" /></Center> : <SlideFade key={router.route} in offsetY={25}>
-					<Component {...pageProps} />
-				</SlideFade>}
+				{routeLoading ? (
+					<Center py="20">
+						<LoaderComponent size="lg" />
+					</Center>
+				) : (
+					<SlideFade key={router.route} in offsetY={25}>
+						<Component {...pageProps} />
+					</SlideFade>
+				)}
 
 				{/* footer */}
 				<DynamicFooterComponent />

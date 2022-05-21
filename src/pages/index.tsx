@@ -32,7 +32,6 @@ const Index: NextPage = () => {
 			<Heading h={1000} size="lg">
 				Something
 				<LoaderComponent size="lg" />
-
 			</Heading>
 		</DynamicPageComponent>
 	);
