@@ -5,6 +5,10 @@ export interface UsefullLink {
 	tooltip: string;
 }
 
+export enum PageShortcutsLocalStorage {
+	MOVE_POSITION = "move-pos"
+}
+
 export interface CompanyUpdateContextActions {
 	/**
 	 * Toggles bar size to wide or not.
