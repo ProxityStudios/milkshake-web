@@ -11,6 +11,6 @@
 	"description": "Official Milkshake's Website.",
 	"display": "fullscreen",
 	"start_url": "/",
-	"background_color": "#000",
+	"background_color": "#181716",
 	"theme_color": "#000"
 }
