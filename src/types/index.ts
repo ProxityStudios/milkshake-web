@@ -6,7 +6,7 @@ export interface UsefullLink {
 }
 
 export enum PageShortcutsLocalStorage {
-	MOVE_POSITION = "move-pos"
+	MOVE_POSITION = 'move-pos'
 }
 
 export interface CompanyUpdateContextActions {
@@ -28,7 +28,7 @@ export interface CompanyContextState {
 		isWide: boolean;
 	};
 	user: {
-		isLoggedIn: boolean | null;
+		isLoggedIn: boolean;
 		username: string | null;
 		displayName: string | null;
 		email: string | null;

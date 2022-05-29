@@ -20,7 +20,7 @@ export const CompanyUpdateContext = createContext<CompanyUpdateContextActions | 
 export const useCompanyContext = () => useContext(CompanyContext);
 export const useCompanyUpdateContext = () => useContext(CompanyUpdateContext) as CompanyUpdateContextActions;
 
-export function CompanyProvider({ children }: { children: ReactNode; }) {
+export function CompanyProvider({ children }: { children: ReactNode }) {
 	const [bar, setBar] = useState(INITIAL_STATE.bar);
 	const [user, setUser] = useState(INITIAL_STATE.user);
 

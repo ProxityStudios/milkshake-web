@@ -7,7 +7,7 @@ const HeaderComponent = () => {
 			<DynamicCompanyBarComponent />
 
 			{/* navigation bar */}
-			<DynamicNavigationBarComponent boxprops={{ position: "sticky", top: 0 }} />
+			<DynamicNavigationBarComponent boxprops={{ position: 'sticky', top: 0 }} />
 		</>
 	);
 };

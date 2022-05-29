@@ -29,21 +29,8 @@ const NavigationBar: React.FC<NavigationBarProps> = ({ boxprops, ...props }) => 
 	const backdropBrightness = useColorModeValue(1.1, 1);
 
 	return (
-		<Box borderBottomRadius="2xl"
-			backdropFilter="auto"
-			backdropBrightness={backdropBrightness}
-			backdropBlur="xl"
-			zIndex="sticky"
-			{...boxprops}>
-			<Container
-				overflow="hidden"
-				as={Flex}
-				alignItems="center"
-				justifyContent="space-between"
-				maxW="container.xl"
-				py="5"
-				{...props}
-			>
+		<Box borderBottomRadius="2xl" backdropFilter="auto" backdropBrightness={backdropBrightness} backdropBlur="xl" zIndex="sticky" {...boxprops}>
+			<Container overflow="hidden" as={Flex} alignItems="center" justifyContent="space-between" maxW="container.xl" py="5" {...props}>
 				<HStack spacing="6" divider={<StackDivider />} alignItems="center">
 					{/* left logo */}
 					<Link as={NextLink} href="/" passHref>

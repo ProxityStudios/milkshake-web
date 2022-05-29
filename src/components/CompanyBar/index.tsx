@@ -79,7 +79,7 @@ const CompanyBar: React.FC<CompanyBarProps> = (props) => {
 								<CompanyBarNavigationComponent mr="6" />
 								{companyContext.user.isLoggedIn ? (
 									<Menu>
-										<MenuButton as={Button} rightIcon={<ChevronDownIcon />} aria-label="My Profile" icon variant="outline">
+										<MenuButton as={Button} rightIcon={<ChevronDownIcon />} aria-label="My Profile" variant="outline">
 											{companyContext.user.displayName}
 										</MenuButton>
 										<Portal>
@@ -98,10 +98,7 @@ const CompanyBar: React.FC<CompanyBarProps> = (props) => {
 										variant="outline"
 										isLoading={loading}
 										spinner={<LoaderComponent size="xs" />}
-										onClick={() => {
-											setLoading(true);
-											signIn();
-										}}
+										onClick={signIn}
 									>
 										Sign In
 									</Button>

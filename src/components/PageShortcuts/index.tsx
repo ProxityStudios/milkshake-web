@@ -1,6 +1,6 @@
 import { Box, Center, Divider, Stack, StackProps, Tooltip, useColorModeValue } from '@chakra-ui/react';
 import { QuestionIcon, DragHandleIcon } from '@chakra-ui/icons';
-import Draggable from "react-draggable";
+import Draggable from 'react-draggable';
 
 import IconButtonComponent from '../IconButton';
 
